@@ -18,6 +18,8 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      base: "/Pillars-Showcase/", // Make sure to include leading and trailing slashes
+        }
     };
 });
