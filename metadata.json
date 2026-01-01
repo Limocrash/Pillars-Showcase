@@ -1,0 +1,7 @@
+{
+  "name": "AreTéCracy Pillars Showcase",
+  "description": "A high-fidelity concept for the AreTéCracy website, featuring ancient Greek architectural pillars blended with mysterious high-tech Nyctimene imagery.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
