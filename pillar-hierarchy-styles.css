@@ -1,0 +1,319 @@
+/* Hierarchical Pillar Navigation CSS - Add to your index.css */
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--medium-stone);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary-cyan);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-cyan);
+}
+
+/* Pillar Navigation Container */
+.pillar-nav-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Main Pillars Row */
+.main-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-pillar-item {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafb 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+  position: relative;
+}
+
+.main-pillar-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+}
+
+.main-pillar-item.active {
+  background: white;
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 0 4px rgba(0, 184, 212, 0.1);
+}
+
+.pillar-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-cyan-glow) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3);
+}
+
+.greek-letter {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+.main-pillar-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-stone);
+  font-weight: 600;
+}
+
+.pillar-subtitle {
+  font-size: 0.875rem;
+  color: var(--light-stone);
+  font-style: italic;
+}
+
+/* Supporting Pillars Row */
+.supporting-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafb 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.supporting-pillar-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.supporting-pillar-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary-cyan);
+}
+
+.supporting-pillar-item.active {
+  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-cyan-glow) 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.supporting-pillar-item h5 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.supporting-pillar-item.active h5,
+.supporting-pillar-item.active .supporting-subtitle {
+  color: white;
+}
+
+.supporting-subtitle {
+  font-size: 0.75rem;
+  color: var(--light-stone);
+  display: block;
+}
+
+.expand-indicator {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  opacity: 0.5;
+}
+
+/* Sub-pillars Row */
+.sub-pillars-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fefefe 0%, #fafafa 100%);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-cyan);
+  animation: slideDown 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.sub-pillar-item {
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sub-pillar-item:hover {
+  background: var(--cream);
+  border-color: var(--primary-cyan);
+}
+
+.sub-pillar-item h6 {
+  font-size: 0.875rem;
+  margin-bottom: 0.125rem;
+  font-weight: 600;
+  color: var(--medium-stone);
+}
+
+.sub-subtitle {
+  font-size: 0.7rem;
+  color: var(--light-stone);
+  font-style: italic;
+}
+
+/* Content Display Card */
+.pillar-display-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.back-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--medium-stone) 0%, var(--dark-stone) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Navigation Bar */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-pillars-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .supporting-pillars-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .pillar-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Visual Hierarchy Indicators */
+.main-pillar-item::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--primary-cyan);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-pillar-item.active::before {
+  opacity: 0.5;
+}
+
+/* Hover Effects */
+.pillar-nav-container:has(.main-pillar-item:hover) .main-pillar-item:not(:hover) {
+  opacity: 0.7;
+}
+
+.supporting-pillars-row:has(.supporting-pillar-item:hover) .supporting-pillar-item:not(:hover) {
+  opacity: 0.7;
+}
+
+/* Active State Glow */
+.main-pillar-item.active .pillar-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3);
+  }
+  50% { 
+    box-shadow: 0 4px 20px rgba(0, 184, 212, 0.5);
+  }
+}
